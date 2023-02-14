@@ -1,7 +1,6 @@
 function holiday(patience) {
   let result = "C праздником";
   result += " " + patience;
-  alert(result);
 }
 
 const numberToDay = {
@@ -143,17 +142,19 @@ function friendDuration() {
   month < 0 ? (month += 12) && (year -= 1) : month;
   dayNumber < 0 ? (dayNumber += monthDays[month]) && (month -= 1) : dayNumber;
 
-  month = monthString(month);
-  year = yearString(year);
+  const strMonth = monthString(month);
+  const strYear = yearString(year);
+  const inMonthes = monthString(year * 12 + month);
 
   if (dayNumber === 0) {
-    const output = `${friendHolidayHeading} ${year} и ${month} или ${year * 12 + month}`;
+    const output = `${friendHolidayHeading} ${strYear} и ${strMonth} или целых ${inMonthes}`;
     holiday(output);
+    document.getElementById("friendDurationDay").innerHTML = output;
   } else {
     dayNumber = dayString(dayNumber);
 
     document.getElementById("friendDurationDay").innerHTML =
-      friendHeading + " " + year + " " + month + " " + dayNumber;
+      friendHeading + " " + strYear + " " + strMonth + " " + dayNumber;
   }
 
   //time
@@ -168,9 +169,10 @@ function friendDuration() {
   hours < 10 ? (hours = "0" + hours) : hours;
   minutes < 10 ? (minutes = "0" + minutes) : minutes;
   seconds < 10 ? (seconds = "0" + seconds) : seconds;
-  //console.log(typeof hours, typeof minutes, seconds);
 
-  document.getElementById("friendDurationClock").innerHTML = hours + ":" + minutes + ":" + seconds;
+  if (dayNumber !== 0) {
+    document.getElementById("friendDurationClock").innerHTML = hours + ":" + minutes + ":" + seconds;
+  }
 }
 
 //love start
@@ -208,12 +210,14 @@ function loveDuration() {
   month < 0 ? (month += 12) && (year -= 1) : month;
   dayNumber < 0 ? (dayNumber += monthDays[month]) && (month -= 1) : dayNumber;
   year === 0 ? (year = "\0") : year;
-  month = monthString(month);
-  year = yearString(year);
+  const strMonth = monthString(month);
+  const strYear = yearString(year);
+  const inMonthes = monthString(year * 12 + month);
 
   if (dayNumber === 0) {
-    const output = `${holidayHeading} ${year} и ${month} или ${year * 12 + month}`;
+    const output = `${holidayHeading} ${strYear} и ${strMonth} или целых ${inMonthes}`;
     holiday(output);
+    document.getElementById("loveDurationDay").innerHTML = output
   } else {
     dayNumber = dayString(dayNumber);
 
@@ -234,7 +238,9 @@ function loveDuration() {
   minutes < 10 ? (minutes = "0" + minutes) : minutes;
   seconds < 10 ? (seconds = "0" + seconds) : seconds;
 
-  document.getElementById("loveDurationClock").innerHTML = hours + ":" + minutes + ":" + seconds;
+  if(dayNumber !== 0){
+    document.getElementById("loveDurationClock").innerHTML = hours + ":" + minutes + ":" + seconds;
+  }
 }
 
 //All holidays
@@ -251,7 +257,7 @@ function holidays() {
   myHB();
 }
 //14 february
-const fourteenFebruary = "С 14 февраля  Cолнышко!!!";
+const fourteenFebruary = "С 14 февраля  Солнышко!!!";
 const feb = [14, 1];
 
 function february() {
