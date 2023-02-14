@@ -251,7 +251,7 @@ function holidays() {
   myHB();
 }
 //14 february
-const fourteenFebruary = "С 14 февраля  Cолнышко!!!";
+const fourteenFebruary = "С 14 февраля  Солнышко!!!";
 const feb = [14, 1];
 
 function february() {
