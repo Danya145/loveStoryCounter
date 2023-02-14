@@ -1,0 +1,60 @@
+@import "variables.scss", "general_part.scss";
+
+body {
+  background: url(/pics/main/fon.jpg) no-repeat;
+  background-size: cover;
+}
+
+.pictures {
+  @include flexcolumn();
+  width: 100%;
+  gap: 50px;
+  img:nth-child(1) {
+    width: 70%;
+  }
+}
+.top {
+  height: 150px;
+  @include flexcolumn();
+  justify-content: space-around;
+  font-weight: bold;
+  color: $purple;
+  h1 {
+    font-size: 50px;
+    font-style: italic;
+  }
+  p {
+    font-size: 25px;
+  }
+}
+.horizontal_ul {
+  margin-top: 100px;
+  position: relative;
+  width: 100%;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  ul {
+    width: 100%;
+    justify-content: space-around;
+    @include flexrow();
+    li {
+      font-size: 30px;
+      list-style-type: "♥";
+      a {
+        text-decoration: none;
+        color: $purple;
+      }
+    }
+  }
+}
+.horizontal_ul::before {
+  width: 100vw;
+  height: 150px;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba($color: #000000, $alpha: 0.3);
+  z-index: -1;
+}

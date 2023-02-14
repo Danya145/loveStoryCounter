@@ -1,0 +1,63 @@
+@mixin aboreto() {
+  font-family: "Aboreto", cursive;
+  font-size: 25px;
+}
+@mixin flexrow() {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+body {
+  background: #6effc7;
+  @include aboreto();
+}
+.top {
+  font-size: 50px;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 30px;
+}
+.specialDates {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 50px;
+  p {
+    margin: 30px;
+  }
+  .nowDate {
+    @include flexrow();
+  }
+  .firstMeet {
+    @include flexrow();
+  }
+  .friendDuration {
+    @include flexrow();
+  }
+  .love {
+    @include flexrow();
+  }
+  .loveDuration {
+    @include flexrow();
+  }
+  .osminog {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    a {
+      width: 60%;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.holidays {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 50px;
+}

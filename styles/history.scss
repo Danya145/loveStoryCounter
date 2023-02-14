@@ -1,0 +1,50 @@
+@import "variables.scss", "general_part.scss";
+body {
+  background-color: aquamarine;
+}
+header {
+  nav {
+    a {
+      color: antiquewhite;
+    }
+  }
+}
+.heading {
+  color: mediumorchid;
+}
+.pictures {
+  width: 100%;
+  @include flexcolumn();
+  img {
+    width: 50%;
+  }
+  p {
+    @include picture_head();
+  }
+  p:nth-child(2) {
+    color: darkviolet;
+  }
+  p:nth-child(4) {
+    color: purple;
+  }
+  p:nth-child(6) {
+    color: blueviolet;
+  }
+  p:nth-child(8) {
+    color: mediumorchid;
+  }
+  p:nth-child(10) {
+    color: violet;
+  }
+  .picture_block {
+    width: 100%;
+    @include flexrow();
+    gap: 30px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    img {
+      width: 48%;
+    }
+  }
+}

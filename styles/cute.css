@@ -1,0 +1,265 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 70px;
+  background: rgba(0, 0, 0, 0.35);
+}
+header nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100%;
+  gap: 50px;
+  justify-content: space-between;
+  padding: 0 30%;
+}
+header nav a {
+  text-decoration: none;
+  font-size: 25px;
+  color: antiquewhite;
+}
+
+.heading {
+  margin-top: 70px;
+  width: 100%;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+.heading h1 {
+  font-size: 50px;
+}
+.heading h3 {
+  font-size: 25px;
+}
+
+footer {
+  width: 100%;
+  height: 300px;
+  background-color: rgba(255, 255, 255, 0.6274509804);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  justify-content: space-around;
+}
+footer .column {
+  width: 30%;
+  height: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+footer .column a {
+  margin-bottom: 20px;
+  font-size: 25px;
+  text-decoration: none;
+}
+footer .column p {
+  text-align: center;
+}
+
+body {
+  background: lightsalmon;
+}
+
+.top {
+  margin-top: 70px;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.top h1 {
+  color: limegreen;
+}
+
+.beautiful, .village, .party, .videocalls, .lakes, .hb {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 70px;
+}
+.beautiful h1, .village h1, .party h1, .videocalls h1, .lakes h1, .hb h1 {
+  line-height: 50px;
+  color: #00ac06;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.village, .party, .videocalls, .lakes, .hb {
+  margin-top: 50px;
+}
+.village h1, .party h1, .videocalls h1, .lakes h1, .hb h1 {
+  color: red;
+}
+
+.hb {
+  margin-bottom: 50px;
+}
+.hb h1 {
+  color: purple;
+  margin-bottom: 0;
+}
+.hb img:nth-child(4) {
+  height: 300px;
+  align-self: center;
+}
+
+.lakes h1 {
+  color: #00d5ff;
+  margin-bottom: 30px;
+}
+.lakes h3 {
+  color: rgb(73, 73, 255);
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.videocalls h1 {
+  margin-bottom: 30px;
+  color: rgb(255, 0, 255);
+}
+
+.party h1 {
+  color: red;
+}
+.party h3 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  color: rgb(253, 40, 40);
+}
+
+.prom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.kino {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.kino img {
+  width: 90% !important;
+}
+.kino img:nth-last-child(1) {
+  width: 47% !important;
+}
+
+.ourNineteen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.ourNineteen img:nth-last-child(1) {
+  width: 70%;
+}
+.ourNineteen img:nth-child(4) {
+  height: auto;
+  align-self: center;
+}
+
+.albom {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.albom img {
+  width: 20%;
+  height: auto;
+}
+
+.bigWidth {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.bigWidth img {
+  width: 47%;
+}
+
+.block {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#kino {
+  display: grid;
+  grid-template-areas: "a a" "b c";
+  justify-items: center;
+  gap: 20px;
+}
+#kino img:nth-child(1) {
+  grid-area: a;
+  width: 95%;
+}
+#kino img:nth-child(2) {
+  grid-area: b;
+  width: 75%;
+}
+#kino img:nth-child(3) {
+  grid-area: c;
+  width: 75%;
+}
+
+#fullImage {
+  position: absolute;
+  top: 20px;
+  z-index: 1;
+  width: auto;
+  height: 100%;
+}
+
+#fullImage:after {
+  content: "";
+}
+
+#bg {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+#surprise {
+  background-color: rgba(255, 255, 255, 0.6274509804);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+#surprise a {
+  color: #000;
+}/*# sourceMappingURL=cute.css.map */

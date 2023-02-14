@@ -1,0 +1,70 @@
+body {
+  background: #6effc7;
+  font-family: "Aboreto", cursive;
+  font-size: 25px;
+}
+
+.top {
+  font-size: 50px;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.specialDates {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 50px;
+}
+.specialDates p {
+  margin: 30px;
+}
+.specialDates .nowDate {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+.specialDates .firstMeet {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+.specialDates .friendDuration {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+.specialDates .love {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+.specialDates .loveDuration {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+.specialDates .osminog {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+}
+.specialDates .osminog a {
+  width: 60%;
+}
+.specialDates .osminog a img {
+  width: 100%;
+}
+
+.holidays {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 50px;
+}/*# sourceMappingURL=style.css.map */
