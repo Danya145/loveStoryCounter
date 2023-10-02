@@ -296,3 +296,11 @@ function myHB() {
     document.getElementById("holDay").textContent = myDay;
   }
 }
+
+function getYear() {
+  let date = new Date(),
+    year = date.getFullYear() - love.getFullYear(),
+    month = date.getMonth() - love.getMonth();
+  month < 0 ? (month += 12) && (year -= 1) : month;
+  document.getElementById("years").innerText = year;
+}

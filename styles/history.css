@@ -10,6 +10,10 @@
 
 header {
   position: fixed;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
   top: 0;
   width: 100%;
   height: 70px;
@@ -20,9 +24,9 @@ header nav {
   flex-direction: row;
   align-items: center;
   height: 100%;
+  width: 100%;
   gap: 50px;
   justify-content: space-between;
-  padding: 0 30%;
 }
 header nav a {
   text-decoration: none;
@@ -41,24 +45,28 @@ header nav a {
 }
 .heading h1 {
   font-size: 50px;
+  text-align: center;
 }
 .heading h3 {
   font-size: 25px;
+  text-align: center;
 }
 
 footer {
   width: 100%;
-  height: 300px;
+  min-height: 300px;
   background-color: rgba(255, 255, 255, 0.6274509804);
   display: flex;
   flex-direction: row;
   align-items: center;
+  align-items: baseline;
+  padding-top: 25px;
   gap: 20px;
   justify-content: space-around;
 }
 footer .column {
   width: 30%;
-  height: 220px;
+  min-height: 220px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -73,6 +81,15 @@ footer .column p {
   text-align: center;
 }
 
+@media (max-width: 650px) {
+  .pictures img {
+    width: 90%;
+  }
+  header nav {
+    gap: 0;
+    justify-content: space-around;
+  }
+}
 body {
   background-color: aquamarine;
 }
@@ -98,6 +115,7 @@ header nav a {
   font-size: 35px;
   line-height: 100px;
   font-weight: bold;
+  text-align: center;
 }
 .pictures p:nth-child(2) {
   color: darkviolet;
@@ -126,4 +144,10 @@ header nav a {
 }
 .pictures .picture_block img {
   width: 48%;
+}
+
+@media (max-width: 750px) {
+  .pictures .picture_block img {
+    width: 90%;
+  }
 }/*# sourceMappingURL=history.css.map */

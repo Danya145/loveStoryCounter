@@ -11,6 +11,10 @@
 
 header {
   position: fixed;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
   top: 0;
   width: 100%;
   height: 70px;
@@ -21,9 +25,9 @@ header nav {
   flex-direction: row;
   align-items: center;
   height: 100%;
+  width: 100%;
   gap: 50px;
   justify-content: space-between;
-  padding: 0 30%;
 }
 header nav a {
   text-decoration: none;
@@ -42,24 +46,28 @@ header nav a {
 }
 .heading h1 {
   font-size: 50px;
+  text-align: center;
 }
 .heading h3 {
   font-size: 25px;
+  text-align: center;
 }
 
 footer {
   width: 100%;
-  height: 300px;
+  min-height: 300px;
   background-color: rgba(255, 255, 255, 0.6274509804);
   display: flex;
   flex-direction: row;
   align-items: center;
+  align-items: baseline;
+  padding-top: 25px;
   gap: 20px;
   justify-content: space-around;
 }
 footer .column {
   width: 30%;
-  height: 220px;
+  min-height: 220px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -74,8 +82,23 @@ footer .column p {
   text-align: center;
 }
 
+@media (max-width: 650px) {
+  .pictures img {
+    width: 90%;
+  }
+  header nav {
+    gap: 0;
+    justify-content: space-around;
+  }
+  footer {
+    gap: 0;
+  }
+  footer .column p {
+    text-align: justify;
+  }
+}
 body {
-  background: url(../pics/main/fon.jpg) no-repeat;
+  background: url(../pics/main/fon1.jpg) no-repeat;
   background-size: cover;
 }
 
@@ -83,10 +106,11 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-around;
   width: 100%;
   gap: 50px;
 }
-.pictures img:nth-child(1) {
+.pictures img {
   width: 70%;
 }
 
@@ -100,6 +124,7 @@ body {
   color: #ff00ff;
 }
 .top h1 {
+  text-align: center;
   font-size: 50px;
   font-style: italic;
 }
@@ -140,4 +165,31 @@ body {
   left: 0;
   background: rgba(0, 0, 0, 0.3);
   z-index: -1;
+}
+
+@media (max-width: 750px) {
+  .horizontal_ul {
+    height: 300px;
+  }
+  .horizontal_ul ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 300px;
+  }
+  .horizontal_ul ul li a {
+    margin-left: 10px;
+    font-size: 40px;
+  }
+  .horizontal_ul::before {
+    height: 300px;
+  }
+}
+@media (max-width: 500px) {
+  .pictures {
+    height: auto;
+  }
+  .pictures img {
+    width: 90%;
+  }
 }/*# sourceMappingURL=main.css.map */

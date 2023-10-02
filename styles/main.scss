@@ -1,32 +1,40 @@
 @import "variables.scss", "general_part.scss";
 
 body {
-  background: url(../pics/main/fon.jpg) no-repeat;
+  background: url(../pics/main/fon1.jpg) no-repeat;
   background-size: cover;
 }
 
 .pictures {
   @include flexcolumn();
+  justify-content: space-around;
   width: 100%;
   gap: 50px;
-  img:nth-child(1) {
+
+
+  img {
     width: 70%;
   }
 }
+
 .top {
   height: 150px;
   @include flexcolumn();
   justify-content: space-around;
   font-weight: bold;
   color: $purple;
+
   h1 {
+    text-align: center;
     font-size: 50px;
     font-style: italic;
   }
+
   p {
     font-size: 25px;
   }
 }
+
 .horizontal_ul {
   margin-top: 100px;
   position: relative;
@@ -34,13 +42,16 @@ body {
   height: 150px;
   display: flex;
   align-items: center;
+
   ul {
     width: 100%;
     justify-content: space-around;
     @include flexrow();
+
     li {
       font-size: 30px;
       list-style-type: "♥";
+
       a {
         text-decoration: none;
         color: $purple;
@@ -48,6 +59,7 @@ body {
     }
   }
 }
+
 .horizontal_ul::before {
   width: 100%;
   height: 150px;
@@ -57,4 +69,35 @@ body {
   left: 0;
   background: rgba($color: #000000, $alpha: 0.3);
   z-index: -1;
+}
+
+@media(max-width:750px) {
+
+  .horizontal_ul {
+    height: 300px;
+
+    ul {
+      @include flexcolumn();
+      height: 300px;
+
+      li a {
+        margin-left: 10px;
+        font-size: 40px;
+      }
+    }
+  }
+
+  .horizontal_ul::before {
+    height: 300px;
+  }
+}
+
+@media(max-width:500px) {
+  .pictures {
+    height: auto;
+
+    img {
+      width: 90%;
+    }
+  }
 }

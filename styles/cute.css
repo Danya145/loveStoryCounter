@@ -10,6 +10,10 @@
 
 header {
   position: fixed;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
   top: 0;
   width: 100%;
   height: 70px;
@@ -20,9 +24,9 @@ header nav {
   flex-direction: row;
   align-items: center;
   height: 100%;
+  width: 100%;
   gap: 50px;
   justify-content: space-between;
-  padding: 0 30%;
 }
 header nav a {
   text-decoration: none;
@@ -48,17 +52,19 @@ header nav a {
 
 footer {
   width: 100%;
-  height: 300px;
+  min-height: 300px;
   background-color: rgba(255, 255, 255, 0.6274509804);
   display: flex;
   flex-direction: row;
   align-items: center;
+  align-items: baseline;
+  padding-top: 25px;
   gap: 20px;
   justify-content: space-around;
 }
 footer .column {
   width: 30%;
-  height: 220px;
+  min-height: 220px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -73,6 +79,12 @@ footer .column p {
   text-align: center;
 }
 
+@media (max-width: 650px) {
+  header nav {
+    gap: 0;
+    justify-content: space-around;
+  }
+}
 body {
   background: lightsalmon;
 }
@@ -109,6 +121,7 @@ body {
 }
 .village h1, .party h1, .videocalls h1, .lakes h1, .hb h1 {
   color: red;
+  text-align: center;
 }
 
 .hb {
@@ -157,6 +170,7 @@ body {
 
 .kino {
   margin-top: 20px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -169,6 +183,9 @@ body {
 }
 .kino img:nth-last-child(1) {
   width: 47% !important;
+}
+.kino video {
+  width: 100%;
 }
 
 .ourNineteen {
@@ -185,6 +202,7 @@ body {
 }
 
 .albom {
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -193,6 +211,7 @@ body {
 }
 .albom img {
   width: 20%;
+  min-width: 160px;
   height: auto;
 }
 
@@ -254,12 +273,21 @@ body {
 }
 
 #surprise {
+  padding-top: 5px;
   background-color: rgba(255, 255, 255, 0.6274509804);
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
 }
-#surprise a {
+#surprise a,
+#surprise p {
   color: #000;
+  text-align: center;
+}
+
+@media (max-width: 440px) {
+  .bigWidth img {
+    width: 100%;
+  }
 }/*# sourceMappingURL=cute.css.map */
