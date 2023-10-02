@@ -171,7 +171,8 @@ function friendDuration() {
   seconds < 10 ? (seconds = "0" + seconds) : seconds;
 
   if (dayNumber !== 0) {
-    document.getElementById("friendDurationClock").innerHTML = hours + ":" + minutes + ":" + seconds;
+    document.getElementById("friendDurationClock").innerHTML =
+      hours + ":" + minutes + ":" + seconds;
   }
 }
 
@@ -217,12 +218,12 @@ function loveDuration() {
   if (dayNumber === 0) {
     const output = `${holidayHeading} ${strYear} и ${strMonth} или целых ${inMonthes}`;
     holiday(output);
-    document.getElementById("loveDurationDay").innerHTML = output
+    document.getElementById("loveDurationDay").innerHTML = output;
   } else {
     dayNumber = dayString(dayNumber);
 
     document.getElementById("loveDurationDay").innerHTML =
-      heading + " " + year + " " + month + " " + dayNumber;
+      heading + " " + strYear + " " + strMonth + " " + dayNumber;
   }
 
   //time
@@ -238,7 +239,7 @@ function loveDuration() {
   minutes < 10 ? (minutes = "0" + minutes) : minutes;
   seconds < 10 ? (seconds = "0" + seconds) : seconds;
 
-  if(dayNumber !== 0){
+  if (dayNumber !== 0) {
     document.getElementById("loveDurationClock").innerHTML = hours + ":" + minutes + ":" + seconds;
   }
 }
