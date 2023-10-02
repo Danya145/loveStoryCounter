@@ -1,47 +1,62 @@
 @import "variables.scss", "general_part.scss";
 
 body {
-  background: deepskyblue;
+  background: #372800; //deepskyblue   
 }
+
 .heading {
   h1 {
     color: purple;
   }
+
   h3 {
     color: mistyrose;
   }
 }
+
 .firstYear {
   @include flexcolumn();
   gap: 100px;
   margin-bottom: 100px;
 }
+
 .holiday {
   width: 100%;
+  padding: 20px 0;
+  background: #f6b60d;
+  border-radius: 20px;
   @include flexrow();
-  gap: 80px;
-  justify-content: space-around;
+  gap: 30px;
+  justify-content: space-between;
+
   .date {
+    width: 30%;
     @include flexcolumn();
     font-size: 30px;
     font-weight: bold;
+
     span {
       font-size: 70px;
     }
+
+    p {
+      text-align: center;
+    }
   }
+
   video {
     width: 400px;
   }
+
   .holiPictures {
     width: 70%;
     @include flexrow();
+    justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
-    img {
-      width: 400px;
-    }
   }
+
   img {
-    width: 400px;
+    width: 300px;
   }
 }
