@@ -96,3 +96,31 @@ footer {
     }
   }
 }
+
+@media(max-width:1000px),
+(orientation:portrait) {
+
+
+  .pictures {
+    img {
+      width: 90%;
+    }
+  }
+
+  header {
+    nav {
+      gap: 0;
+      justify-content: space-around;
+    }
+  }
+
+  footer {
+    gap: 0;
+
+    .column {
+      p {
+        text-align: justify;
+      }
+    }
+  }
+}

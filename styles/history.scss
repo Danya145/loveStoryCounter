@@ -72,3 +72,14 @@ header {
     }
   }
 }
+
+@media(max-width:1000px),
+(orientation:portrait) {
+  .pictures {
+    .picture_block {
+      img {
+        width: 90%;
+      }
+    }
+  }
+}

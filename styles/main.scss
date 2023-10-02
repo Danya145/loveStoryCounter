@@ -101,3 +101,32 @@ body {
     }
   }
 }
+
+@media(max-width:1000px),
+(orientation:portrait) {
+  .pictures {
+    height: auto;
+
+    img {
+      width: 90%;
+    }
+  }
+
+  .horizontal_ul {
+    height: 300px;
+
+    ul {
+      @include flexcolumn();
+      height: 300px;
+
+      li a {
+        margin-left: 10px;
+        font-size: 40px;
+      }
+    }
+  }
+
+  .horizontal_ul::before {
+    height: 300px;
+  }
+}

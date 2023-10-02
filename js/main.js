@@ -1,5 +1,5 @@
 function changeImage(screenWidth) {
-  if (screenWidth < 600) {
+  if (screenWidth < 1000) {
     const changeImg = document.getElementById("changeImg");
     changeImg.src = "pics/main/gl.jpg";
   } else {

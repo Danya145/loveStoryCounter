@@ -89,6 +89,12 @@ footer .column p {
     gap: 0;
     justify-content: space-around;
   }
+  footer {
+    gap: 0;
+  }
+  footer .column p {
+    text-align: justify;
+  }
 }
 body {
   background-color: aquamarine;
@@ -147,6 +153,11 @@ header nav a {
 }
 
 @media (max-width: 750px) {
+  .pictures .picture_block img {
+    width: 90%;
+  }
+}
+@media (max-width: 1000px), (orientation: portrait) {
   .pictures .picture_block img {
     width: 90%;
   }
